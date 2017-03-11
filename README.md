@@ -1,6 +1,6 @@
 # api_autotest
 
-> api自动化测试框架：支持http(s)以及FCP接口
+> api自动化测试框架：支持http(s)
 
 ## http(s)接口
 
@@ -12,12 +12,12 @@
 - excel:测试用例存放的位置，执行时框架会根据excel中的配置的相对路径去读取用例，多个excel表使用“；”隔开。  
 
 	<root>
-    	<rootUrl>http://open.fsceshi.com</rootUrl>
+    	<rootUrl>http://open.baidu.com</rootUrl>
     	<headers>
     	    <header name="Content-Type" value="application/json"></header>
     	</headers>
 		<params>
-			<param name="username" value="chenwx"></param>
+			<param name="username" value="jack"></param>
 		</params>
 		<excel>/api-data.xls;/api-data-2/xls</excel>
 	</root>
@@ -29,8 +29,9 @@
 - run：标记为‘Y’时，该行数据会被读取执行。
 - description：该用例描述。
 - method：该api的请求方法（暂只支持get,post）。
-- url：api请求路径。如：/cgi/appAccessToken/get，会根据配置文件中rootUrl进行自动拼接为：http://open.fsceshi.com/cgi/appAccessToken/get
-- param：请求方法为post时，body的内容（暂只支持json）。
+- url：api请求路径。如：/user/get，会根据配置文件中rootUrl进行自动拼接为：http://open.baidu.com/user/get
+- param：请求方法param参数。
+- body：请求方法为post并且以application/json方式提交的json字符串
 - verify：对于api请求response数据的验证（可使用jsonPath进行校验）。校验多个使用“；”进行隔开。
 "$.errorCode=0;$.errorMessage=success"表示检验接口返回的数据中$.errorCode为"0"以及$.errorMessage为"success"。
 
@@ -62,12 +63,11 @@
 - 执行异常拦截处理（重试机制）
 - log输出
 - 支持xml
-- 支持auth
+- 支持session
 - 支持delete，put等方法
 - 支持验证状态
 - 支持验证数据库
 - 支持更多全局配置
-- 待加+++++
 
 	
 	
