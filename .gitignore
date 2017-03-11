@@ -1,0 +1,23 @@
+rebel.xml
+*-registry-cache.properties
+*-registry-cache.properties.lock
+
+.idea
+target
+test-output
+
+*.iml
+out
+
+
+### Java template
+*.class
+
+###log file
+*.log
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war

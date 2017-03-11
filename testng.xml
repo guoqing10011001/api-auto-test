@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API接口测试" verbose="1" preserve-order="true" parallel="false">
+	<suite-files>
+		<suite-file path="conf/api/testng-product.xml"></suite-file>
+	</suite-files>
+
+	<listeners>	
+		<listener class-name="cn.simafei.test.listeners.AutoTestListener"></listener>
+		<listener class-name="cn.simafei.test.listeners.RetryListener"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> 
+	</listeners>
+</suite> 

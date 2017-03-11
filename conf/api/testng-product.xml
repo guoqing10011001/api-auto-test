@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="91Data接口测试" parallel="false" verbose="1" preserve-order="true">
+	<!-- value = excel name -->
+	<parameter name="excelName" value="api-case/api-data-product.xls"></parameter>
+
+	<test name="店铺接口">
+		<parameter name="sheetName" value="merchant-api"></parameter>
+		<classes>
+			<class name="cn.simafei.test.ApiTest">
+				<methods>							
+					<include name="apiTest"></include>
+				</methods>
+			</class>	
+		</classes>
+	</test>
+    <test name="商品接口">
+        <!-- parameter value = sheetName -->
+        <parameter name="sheetName" value="product-api"></parameter>
+        <classes>
+            <class name="cn.simafei.test.ApiTest">
+                <methods>
+                    <include name="apiTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> 
