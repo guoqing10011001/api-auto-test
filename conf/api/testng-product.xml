@@ -24,4 +24,30 @@
             </class>
         </classes>
     </test>
+
+	<test name="爬虫download列表接口">
+		<!-- parameter value = sheetName -->
+		<parameter name="sheetName" value="spider-api"></parameter>
+		<classes>
+			<class name="cn.simafei.test.ApiTest">
+				<methods>
+					<include name="apiTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="爬虫关键词列表接口">
+		<!-- parameter value = sheetName -->
+		<parameter name="sheetName" value="spider-api"></parameter>
+		<classes>
+			<class name="cn.simafei.test.ApiTest">
+				<methods>
+					<include name="apiTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
 </suite> 
